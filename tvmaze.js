@@ -105,15 +105,10 @@ function populateEpisodes(episodes) {
   const $episodesList = $('#episodes-list');
   $episodesList.empty();
 
-  $episodesList.append(`
-    <div class=col-md-6 col-lg-3 Episodes">
-    </div>
-  `);
-
   for (let episode of episodes) {
     let $item= $(`
-      <div class="col" data-episode-id="${episode.id}">
-        <img class="card-img-top" src="${episode.image}">
+      <div class="col-md-4 col-lg-2" data-episode-id="${episode.id}">
+        <img class="card-img-top" src="${episode.image}" />
         <div class="card-body">
           <h5 class="card-title">${episode.name}</h5>
           <p class="card-text">season ${episode.season} - episode ${episode.number})</p>
@@ -122,6 +117,7 @@ function populateEpisodes(episodes) {
     `)
     $episodesList.append($item)
   }
+
   $("#episodes-area").show();
 }
 
