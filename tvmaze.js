@@ -122,7 +122,6 @@ function populateEpisodes(episodes) {
     `)
     $episodesList.append($item)
   }
-//<li id="${episode.id}">${episode.name} (season ${episode.season}, number ${episode.number})</li>
   $("#episodes-area").show();
 }
 
